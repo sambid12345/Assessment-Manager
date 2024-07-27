@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Routes
-app.use('/api/accounts', accountRoutes);
+app.use('/auth', accountRoutes);
 app.use('/api/questions', questionRoutes);
 app.use('/api/candidates', candidateRoutes);
 

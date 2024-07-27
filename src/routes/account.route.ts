@@ -1,6 +1,7 @@
 import express from 'express';
 import {
   createAccount,
+  loginToAccount,
   getAllAccounts,
   getAccountById,
   updateAccount,
@@ -9,7 +10,8 @@ import {
 
 const router = express.Router();
 
-router.post('/', createAccount);
+router.post('/signup', createAccount);
+router.post('/login', loginToAccount);
 router.get('/', getAllAccounts);
 router.get('/:id', getAccountById);
 router.put('/:id', updateAccount);
