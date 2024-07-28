@@ -49,7 +49,7 @@ export const loginToAccount = async (req: Request, res: Response) => {
         }
 
         // Respond with success message
-        let userInfo = {userMail:user.email, userName: user.username};
+        let userInfo = {userMail:user.email, userName: user.username, userRole: user.role};
         res.status(200).json({ 
           message: 'Login successful', 
           userInfo: userInfo
